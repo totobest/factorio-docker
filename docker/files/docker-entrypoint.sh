@@ -94,5 +94,6 @@ else
     FLAGS+=( --start-server "$SAVE_NAME" )
 fi
 
+nohup syncthing -config /factorio/syncthing -data /root/syncthing &
 # shellcheck disable=SC2086
 exec $SU_EXEC /opt/factorio/bin/x64/factorio "${FLAGS[@]}" "$@"
